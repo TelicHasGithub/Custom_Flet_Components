@@ -15,11 +15,14 @@ class TAppBar(ft.UserControl):
         '''
 
         drag_area = ft.Container(
-            ft.Row(
-                *self.controls
+            ft.Container(
+                ft.Row(
+                    [*self.controls]
+                ),
+                margin=ft.margin.only(left=15)
             ),
-                bgcolor=ft.colors.BLUE_GREY_700,
-                height=40
+            bgcolor=ft.colors.BLUE_GREY_700,
+            height=40
         )
 
         control_panel = ft.Container(
